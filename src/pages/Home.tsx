@@ -10,7 +10,7 @@ function Home() {
 }
 
 const Span = styled.span`
-  color: red;
+  color: ${({ theme }) => theme.fg.danger};
 `;
 
 export default Home;
