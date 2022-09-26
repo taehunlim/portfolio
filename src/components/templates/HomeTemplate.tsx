@@ -16,6 +16,6 @@ function HomeTemplate({ children }: Props) {
 }
 
 const Wrapper = styled.div`
-   padding: 50px;
+   height: 100%;
 `;
 export default HomeTemplate;

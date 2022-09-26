@@ -11,10 +11,10 @@ interface Props {
 function StarTemplate({ children }: Props) {
    return (
       <Container>
-         {children}
          <StarSmall />
          <StarMedium />
          <StarLarge />
+         {children}
       </Container>
    );
 }

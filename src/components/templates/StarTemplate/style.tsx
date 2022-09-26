@@ -19,7 +19,7 @@ function unquote(someStr: string) {
 }
 
 function multiple_box_shadow(n: number) {
-   let value = `${random(2000)}px ${random(20000)}px #FFF`;
+   let value = `${random(2000)}px ${random(2000)}px #FFF`;
 
    for (let i = 2; i < n; i++) {
       value = `${value} , ${random(2000)}px ${random(2000)}px #FFF`;
@@ -33,12 +33,13 @@ const shadows_medium = `${multiple_box_shadow(200)}`;
 const shadows_big = `${multiple_box_shadow(100)}`;
 
 const Container = styled.div`
-   height: 100vh;
+   height: 100%;
    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-   overflow: hidden;
+   // overflow: hidden;
 `;
 
 const StarSmall = styled.div`
+   position: fixed;
    width: 1px;
    height: 1px;
    background: transparent;
@@ -56,6 +57,7 @@ const StarSmall = styled.div`
 `;
 
 const StarMedium = styled.div`
+   position: fixed;
    width: 2px;
    height: 2px;
    background: transparent;
@@ -74,6 +76,7 @@ const StarMedium = styled.div`
 `;
 
 const StarLarge = styled.div`
+   position: fixed;
    width: 3px;
    height: 3px;
    background: transparent;

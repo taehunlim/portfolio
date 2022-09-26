@@ -12,7 +12,6 @@ const styles = css`
 
    html,
    body {
-      overflow: hidden;
       height: 100%;
 
       @supports (-webkit-touch-callout: none) {
@@ -28,7 +27,7 @@ const styles = css`
    /* font-family: 'Roboto', sans-serif; */
 
    body {
-      color: ${theme.fg.black};
+      color: ${theme.fg.white};
       font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
       position: relative;
@@ -39,8 +38,7 @@ const styles = css`
       }
    }
 
-   p,
-   h1 {
+   p {
       font-size: 1rem;
       line-height: 1.3;
       padding: 0;
