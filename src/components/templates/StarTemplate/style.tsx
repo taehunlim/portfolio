@@ -40,6 +40,7 @@ const Container = styled.div`
 
 const StarSmall = styled.div`
    position: fixed;
+   z-index: 9;
    width: 1px;
    height: 1px;
    background: transparent;
@@ -58,6 +59,7 @@ const StarSmall = styled.div`
 
 const StarMedium = styled.div`
    position: fixed;
+   z-index: 9;
    width: 2px;
    height: 2px;
    background: transparent;
@@ -77,6 +79,7 @@ const StarMedium = styled.div`
 
 const StarLarge = styled.div`
    position: fixed;
+   z-index: 9;
    width: 3px;
    height: 3px;
    background: transparent;
