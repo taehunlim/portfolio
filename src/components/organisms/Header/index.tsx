@@ -2,26 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
-import StarTemplate from 'components/templates/StarTemplate';
-
 interface ListItemProps {
    isActive?: boolean;
 }
 
 function Header() {
    return (
-      <StarTemplate>
-         <Navigation>
-            <ul>
-               <ListItem isActive={true}>
-                  <Link to="#">nav1</Link>
-               </ListItem>
-               <ListItem>
-                  <Link to="#">nav2</Link>
-               </ListItem>
-            </ul>
-         </Navigation>
-      </StarTemplate>
+      <Navigation>
+         <ul>
+            <ListItem isActive={true}>
+               <Link to="#">nav1</Link>
+            </ListItem>
+            <ListItem>
+               <Link to="#">nav2</Link>
+            </ListItem>
+         </ul>
+      </Navigation>
    );
 }
 
