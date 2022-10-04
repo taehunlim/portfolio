@@ -231,7 +231,6 @@ const ScrollAnimation = ({ children }: Props) => {
                disabled.set(index, currentAnimation);
             }
 
-            console.log(slides);
             document.addEventListener('scroll', () => onScroll(slides));
 
             return () => {

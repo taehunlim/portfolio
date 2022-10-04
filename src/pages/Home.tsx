@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HomeTemplate from 'components/templates/HomeTemplate';
-import Header from 'components/organisms/ScrollAnimation/Header';
+import Header from 'components/organisms/Header';
 import ScrollAnimation from 'components/organisms/ScrollAnimation';
 
 function Home() {

@@ -33,7 +33,6 @@ export function App() {
    return (
       <Routes>
          <Route path="/" element={<Home />} />
-
          {elements.map(({ path, element: Element }) => (
             <Route key={path} path={path} element={<Element />} />
          ))}
