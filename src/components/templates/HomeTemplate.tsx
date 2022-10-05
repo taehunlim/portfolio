@@ -12,7 +12,7 @@ interface Props {
 
 function HomeTemplate({ header, children }: Props) {
    const settings = {
-      bg: 'rgba(0, 0, 0, 0.1)',
+      bg: 'rgba(0, 0, 0, .1)',
       // compositeOperation: 'destination-out ' as GlobalCompositeOperation,
       // color,
       // debug: false,

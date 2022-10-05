@@ -74,8 +74,6 @@ export function tendrilAnimation({
          tendril.draw(ctx);
       }
 
-      // console.log(window.scrollY);
-
       requestAnimationFrame(loop);
    }
 
