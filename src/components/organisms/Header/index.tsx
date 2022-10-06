@@ -11,10 +11,10 @@ function Header() {
       <Navigation>
          <ul>
             <ListItem isActive={true}>
-               <Link to="#">nav1</Link>
+               <Link to="/">Home</Link>
             </ListItem>
             <ListItem>
-               <Link to="#">nav2</Link>
+               <Link to="/about">ABOUT ME</Link>
             </ListItem>
          </ul>
       </Navigation>

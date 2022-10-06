@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 import HomeTemplate from 'components/templates/HomeTemplate';
@@ -34,11 +35,21 @@ function Home() {
             </StyledSlide>
             <StyledSlide>
                <hgroup>
+                  <h1>💻 경력</h1>
+               </hgroup>
+               <p>2020 ~ 2021 프리랜서</p>
+               <p>2021 ~ 2022 피프틴에이치</p>
+               <p>2022 ~ 현재 웹웨어</p>
+            </StyledSlide>
+            <StyledSlide>
+               <hgroup>
                   <h1>Contacts</h1>
                </hgroup>
-
                <p>📞 +82 </p>
                <p>✉️ naver.com</p>
+            </StyledSlide>
+            <StyledSlide>
+               <Link to="/about">🙋🏻‍♂️ ABOUT ME</Link>
             </StyledSlide>
          </ScrollAnimation>
       </HomeTemplate>
