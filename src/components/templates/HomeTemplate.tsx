@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 import StarTemplate from 'components/templates/StarTemplate';
@@ -12,8 +11,9 @@ interface Props {
 
 function HomeTemplate({ header, children }: Props) {
    const settings = {
-      bg: 'rgba(0, 0, 0, .1)',
-      // compositeOperation: 'destination-out ' as GlobalCompositeOperation,
+      bg: 'transparent',
+      fillCompositeOperation: 'copy' as GlobalCompositeOperation,
+      // storkCompositeOperation: 'darken' as GlobalCompositeOperation,
       // color,
       // debug: false,
       //   size: 50,

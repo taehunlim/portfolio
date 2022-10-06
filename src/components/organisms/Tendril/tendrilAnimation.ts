@@ -57,12 +57,14 @@ export function tendrilAnimation({
    function loop() {
       if (!ctx.running) return;
 
-      ctx.globalCompositeOperation = 'source-over';
+      ctx.globalCompositeOperation =
+         settings.fillCompositeOperation || 'source-over';
 
       ctx.fillStyle = settings.bg || '#1D1D1D';
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-      ctx.globalCompositeOperation = settings.compositeOperation || 'lighter';
+      ctx.globalCompositeOperation =
+         settings.storkCompositeOperation || 'lighter';
 
       ctx.lineWidth = 1;
       ctx.strokeStyle = settings.color || '#1b2735';

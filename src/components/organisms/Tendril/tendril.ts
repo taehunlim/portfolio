@@ -28,7 +28,8 @@ export type SettingsProps = ColorProps & {
 interface ColorProps {
    color?: string;
    bg?: string;
-   compositeOperation?: GlobalCompositeOperation;
+   fillCompositeOperation?: GlobalCompositeOperation;
+   storkCompositeOperation?: GlobalCompositeOperation;
 }
 
 export interface TendrilProps {
