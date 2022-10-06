@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
-import HomeTemplate from 'components/templates/HomeTemplate';
+import HomeTemplate from 'components/templates/IndexTemplate';
 import Header from 'components/organisms/Header';
 import ScrollAnimation from 'components/organisms/ScrollAnimation';
 
-function Home() {
+function Index() {
    return (
       <HomeTemplate header={<Header />}>
          <ScrollAnimation>
@@ -60,4 +60,4 @@ const StyledSlide = styled(ScrollAnimation.Slide)`
    width: 40%;
 `;
 
-export default Home;
+export default Index;
