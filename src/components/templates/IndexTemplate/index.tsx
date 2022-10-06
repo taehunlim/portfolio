@@ -8,11 +8,10 @@ import styledComponent from './style';
 const { Wrapper } = styledComponent;
 
 interface Props {
-   header: ReactNode;
    children: ReactNode;
 }
 
-function IndexTemplate({ header, children }: Props) {
+function IndexTemplate({ children }: Props) {
    const settings = {
       bg: 'transparent',
       fillCompositeOperation: 'copy' as GlobalCompositeOperation,
@@ -26,7 +25,6 @@ function IndexTemplate({ header, children }: Props) {
    };
    return (
       <StarTemplate>
-         {header}
          <Wrapper>{children}</Wrapper>
          <Tendril trails={30} settings={settings} />
       </StarTemplate>

@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 import IndexTemplate from 'components/templates/IndexTemplate';
-import Header from 'components/organisms/Header';
+
 import ScrollAnimation from 'components/organisms/ScrollAnimation';
 
 function Index() {
    return (
-      <IndexTemplate header={<Header />}>
+      <IndexTemplate>
          <ScrollAnimation>
             <StyledSlide>
                <hgroup>

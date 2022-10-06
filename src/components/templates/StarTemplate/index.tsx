@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import Header from 'components/organisms/Header';
 
 import styledComponent from './style';
 
@@ -14,6 +15,7 @@ function StarTemplate({ children }: Props) {
          <StarSmall />
          <StarMedium />
          <StarLarge />
+         <Header />
          {children}
       </Container>
    );

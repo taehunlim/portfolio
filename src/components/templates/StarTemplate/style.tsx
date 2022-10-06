@@ -33,6 +33,7 @@ const shadows_medium = `${multiple_box_shadow(200)}`;
 const shadows_big = `${multiple_box_shadow(100)}`;
 
 const Container = styled.div`
+   min-height: 100vh;
    height: 100%;
    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
    // overflow: hidden;
