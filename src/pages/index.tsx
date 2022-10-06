@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
-import HomeTemplate from 'components/templates/IndexTemplate';
+import IndexTemplate from 'components/templates/IndexTemplate';
 import Header from 'components/organisms/Header';
 import ScrollAnimation from 'components/organisms/ScrollAnimation';
 
 function Index() {
    return (
-      <HomeTemplate header={<Header />}>
+      <IndexTemplate header={<Header />}>
          <ScrollAnimation>
             <StyledSlide>
                <hgroup>
@@ -52,7 +52,7 @@ function Index() {
                <Link to="/about">🙋🏻‍♂️ ABOUT ME</Link>
             </StyledSlide>
          </ScrollAnimation>
-      </HomeTemplate>
+      </IndexTemplate>
    );
 }
 

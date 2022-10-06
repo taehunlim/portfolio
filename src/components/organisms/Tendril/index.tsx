@@ -1,8 +1,11 @@
 import React from 'react';
 import { useRef, useEffect } from 'react';
-import styled from '@emotion/styled';
 
 import { tendrilAnimation, AnimationProps } from './tendrilAnimation';
+
+import styledComponent from './style';
+
+const { StyledCanvas } = styledComponent;
 
 function TendrilAnimation({ trails, settings }: AnimationProps) {
    const ref = useRef(null);
@@ -17,13 +20,7 @@ function TendrilAnimation({ trails, settings }: AnimationProps) {
          });
       }
    }, [ref]);
-   return <Canvas ref={ref}></Canvas>;
+   return <StyledCanvas ref={ref}></StyledCanvas>;
 }
-
-const Canvas = styled.canvas`
-   position: fixed;
-   top: 0;
-   z-index: 7;
-`;
 
 export default TendrilAnimation;

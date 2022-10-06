@@ -1,15 +1,18 @@
 import React, { ReactNode } from 'react';
-import styled from '@emotion/styled';
 
 import StarTemplate from 'components/templates/StarTemplate';
 import Tendril from 'components/organisms/Tendril';
+
+import styledComponent from './style';
+
+const { Wrapper } = styledComponent;
 
 interface Props {
    header: ReactNode;
    children: ReactNode;
 }
 
-function HomeTemplate({ header, children }: Props) {
+function IndexTemplate({ header, children }: Props) {
    const settings = {
       bg: 'transparent',
       fillCompositeOperation: 'copy' as GlobalCompositeOperation,
@@ -30,10 +33,4 @@ function HomeTemplate({ header, children }: Props) {
    );
 }
 
-const Wrapper = styled.div`
-   height: 100%;
-   position: relative;
-   z-index: 8;
-`;
-
-export default HomeTemplate;
+export default IndexTemplate;
