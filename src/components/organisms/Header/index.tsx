@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 import styledComponent from './style';
 
 const { Navigation, ListItem } = styledComponent;
 
 function Header() {
+   const location = useLocation();
+
    return (
       <Navigation>
          <ul>
-            <ListItem isActive={true}>
+            <ListItem isActive={location.pathname === '/'}>
                <Link to="/">Home</Link>
             </ListItem>
-            <ListItem>
+            <ListItem isActive={location.pathname === '/about'}>
                <Link to="/about">ABOUT ME</Link>
             </ListItem>
          </ul>

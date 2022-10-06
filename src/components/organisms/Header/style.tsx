@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 interface ListItemProps {
-   isActive?: boolean;
+   isActive: boolean;
 }
 const Navigation = styled.nav`
    position: fixed;
