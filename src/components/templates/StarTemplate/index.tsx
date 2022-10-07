@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
+
 import Header from 'components/organisms/Header';
+import Tendril from 'components/organisms/Tendril';
 
 import styledComponent from './style';
 
@@ -10,6 +12,17 @@ interface Props {
 }
 
 function StarTemplate({ children }: Props) {
+   const settings = {
+      bg: 'transparent',
+      fillCompositeOperation: 'copy' as GlobalCompositeOperation,
+      // storkCompositeOperation: 'darken' as GlobalCompositeOperation,
+      // color,
+      // debug: false,
+      //   size: 50,
+      // friction: 0.5,
+      // dampening: 0.25,
+      // tension: 0.1,
+   };
    return (
       <Container>
          <StarSmall />
@@ -17,6 +30,7 @@ function StarTemplate({ children }: Props) {
          <StarLarge />
          <Header />
          {children}
+         <Tendril trails={30} settings={settings} />
       </Container>
    );
 }
