@@ -58,6 +58,7 @@ function Index() {
 
 const StyledSlide = styled(ScrollAnimation.Slide)`
    width: 40%;
+   min-width: 320px;
 `;
 
 export default Index;
