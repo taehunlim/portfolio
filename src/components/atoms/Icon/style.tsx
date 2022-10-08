@@ -8,10 +8,9 @@ export interface IconStyleProps {
 const fontSize = ({ width, height }: IconStyleProps) => {
    if (width && height) {
       return '0px';
-   } 
-      const size = width || height;
-      return size ? `${size}px` : '22px';
-   
+   }
+   const size = width || height;
+   return size ? `${size}px` : '22px';
 };
 
 const StyledIcon = styled.span<IconStyleProps>`
