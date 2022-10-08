@@ -13,6 +13,10 @@ const Container = styled.div`
    gap: 50px;
    grid-template-columns: 1fr 1fr;
    align-items: center;
+
+   @media (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      grid-template-columns: auto;
+   }
 `;
 
 const IconContainer = styled.div`
