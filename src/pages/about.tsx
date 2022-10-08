@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AboutTemplate from 'components/templates/AboutTemplate';
+import Icon from 'components/atoms/Icon';
 
 function about() {
    return (
@@ -59,6 +60,47 @@ function about() {
          <p>
             Presentational & Container / Atomic design 패턴 개발에 익숙합니다.
          </p>
+         <div>
+            <div>
+               <Icon icon="html5" />
+               <p>HTML5</p>
+            </div>
+            <div>
+               <Icon icon="css3-alt" />
+
+               <p>CSS3</p>
+            </div>
+            <div>
+               <Icon icon="sass" />
+
+               <p>SASS</p>
+            </div>
+            <div>
+               <Icon icon="js" />
+
+               <p>JavaScript</p>
+            </div>
+            <div>
+               <Icon icon="react" />
+
+               <p>React</p>
+            </div>
+            <div>
+               <Icon icon="git-alt" />
+
+               <p>Git</p>
+            </div>
+            <div>
+               <Icon icon="github" />
+
+               <p>Github</p>
+            </div>
+            <div>
+               <Icon icon="restful" />
+
+               <p>RESTful APIs</p>
+            </div>
+         </div>
       </AboutTemplate>
    );
 }
