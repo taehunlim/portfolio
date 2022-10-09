@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-   // margin-top: 80px;
    h1 {
       margin-top: 0;
       font-size: 70px;
@@ -16,6 +15,8 @@ const Container = styled.div`
 
    @media (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
       grid-template-columns: auto;
+      padding: 30px;
+      margin-top: 80px;
    }
 `;
 
