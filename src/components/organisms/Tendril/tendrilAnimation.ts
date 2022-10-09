@@ -32,8 +32,8 @@ export function tendrilAnimation({
       document.removeEventListener('touchmove', init);
 
       document.addEventListener('mousemove', mousemove);
-      document.addEventListener('touchstart', touchstart);
-      document.addEventListener('touchmove', mousemove);
+      // document.addEventListener('touchstart', touchstart);
+      // document.addEventListener('touchmove', mousemove);
 
       mousemove(event);
       reset();
@@ -105,12 +105,12 @@ export function tendrilAnimation({
       }
    }
 
-   function touchstart(event: TouchEvent) {
-      if (event.touches.length == 1) {
-         position.x = event.touches[0].pageX;
-         position.y = event.touches[0].pageY;
-      }
-   }
+   // function touchstart(event: TouchEvent) {
+   //    if (event.touches.length == 1) {
+   //       position.x = event.touches[0].pageX;
+   //       position.y = event.touches[0].pageY;
+   //    }
+   // }
 
    window.requestAnimationFrame = (function () {
       return (
@@ -129,8 +129,8 @@ export function tendrilAnimation({
    window.addEventListener('blur', stop);
 
    document.addEventListener('mousemove', init);
-   document.addEventListener('touchstart', init);
-   document.removeEventListener('touchmove', init);
+   // document.addEventListener('touchstart', init);
+   // document.addEventListener('touchmove', init);
 
    resize();
 }
