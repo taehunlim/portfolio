@@ -17,6 +17,9 @@ function Header() {
             <ListItem isActive={location.pathname === '/about'}>
                <Link to="/about">ABOUT ME</Link>
             </ListItem>
+            <ListItem isActive={location.pathname === '/hobby'}>
+               <Link to="/hobby">HOBBY</Link>
+            </ListItem>
          </ul>
       </Navigation>
    );
