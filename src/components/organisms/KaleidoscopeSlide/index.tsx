@@ -1,6 +1,7 @@
 import React, { MouseEventHandler, useEffect, useState, useRef } from 'react';
 
 import Kaleidoscope from '../Kaleidoscope';
+import Button from 'components/atoms/Button';
 
 import styledComponent from './style';
 
@@ -67,9 +68,9 @@ function KaleidoscopeSlide({
    return (
       <Container>
          <ButtonContainer>
-            <button onClick={nextImage}>↑</button>
-            <button onClick={handleAutoPlay}>{isAutoPlay ? '| |' : '►'}</button>
-            <button onClick={prevImage}>↓</button>
+            <Button onClick={nextImage}>↑</Button>
+            <Button onClick={handleAutoPlay}>{isAutoPlay ? '| |' : '►'}</Button>
+            <Button onClick={prevImage}>↓</Button>
          </ButtonContainer>
          <KaleidoscopeWrapper>
             <Kaleidoscope
