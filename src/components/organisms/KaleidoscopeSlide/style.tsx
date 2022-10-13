@@ -14,9 +14,12 @@ const KaleidoscopeWrapper = styled.div`
 
    top: 0;
    bottom: 0;
-   left: 0;
-   right: 0;
+   // left: 0;
+   // right: 0;
    margin: auto;
+
+   left: 50%;
+   transform: translateX(-50%);
 
    display: inline-table;
    justify-content: center;
