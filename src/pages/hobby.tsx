@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import HobbyTemplates from 'components/templates/HobbyTemplate';
 import KaleidoscopeSlide from 'components/organisms/KaleidoscopeSlide';
 
 import island from '../assets/images/island.jpeg';
@@ -12,13 +13,13 @@ function hobby() {
    const [imageIndex, setImageIndex] = useState(0);
 
    return (
-      <div style={{ display: 'flex', minHeight: '100vh' }}>
+      <HobbyTemplates>
          <KaleidoscopeSlide
             images={images}
             defaultIndex={imageIndex}
             onChange={(e) => setImageIndex(e.imageIndex)}
          />
-      </div>
+      </HobbyTemplates>
    );
 }
 
