@@ -12,6 +12,7 @@ function hobby() {
    const images = [island, paris, prague, swiss];
    const [imageIndex, setImageIndex] = useState(0);
 
+   if (images.length === 4) throw 'error';
    return (
       <HobbyTemplates>
          <KaleidoscopeSlide
