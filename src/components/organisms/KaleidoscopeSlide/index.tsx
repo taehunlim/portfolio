@@ -65,6 +65,14 @@ function KaleidoscopeSlide({
    function handleAutoPlay() {
       setIsAutoPlay(!isAutoPlay);
    }
+
+   function handleDetail(e: React.MouseEvent<HTMLImageElement>) {
+      if (onDetail) {
+         onDetail(e);
+         setIsAutoPlay(false);
+      }
+   }
+
    return (
       <Container>
          <ButtonContainer>
@@ -76,7 +84,7 @@ function KaleidoscopeSlide({
             <Kaleidoscope
                blur={2}
                img={images[imageIndex]}
-               onClick={onDetail}
+               onClick={handleDetail}
             />
          </KaleidoscopeWrapper>
       </Container>
