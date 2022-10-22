@@ -27,16 +27,13 @@ const loading = keyframes`
    100% {
       box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
    }
-
 `;
 
 const round = keyframes`
    0% {
-
       transform: rotate(0deg);
    }
    100% {
-
       transform: rotate(360deg);
    }
 `;
