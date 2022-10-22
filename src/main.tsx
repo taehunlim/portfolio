@@ -6,11 +6,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { App } from './routes';
 import EmotionProvider from './assets/EmotionProvider';
 import ErrorBoundary from 'components/ErrorBoundary';
+import LoadingTemplate from 'components/templates/LoadingTemplate';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
    <EmotionProvider>
       <BrowserRouter>
-         <Suspense fallback={<Loading />}>
+         <Suspense fallback={<LoadingTemplate />}>
             <ErrorBoundary FallbackComponent={<Error />}>
                <App />
             </ErrorBoundary>
@@ -18,10 +19,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       </BrowserRouter>
    </EmotionProvider>,
 );
-
-function Loading() {
-   return <h1 style={{ color: 'black' }}>Loading...</h1>;
-}
 
 function Error() {
    return <h1 style={{ color: 'black' }}>Application Error</h1>;
