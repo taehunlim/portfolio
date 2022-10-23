@@ -70,6 +70,14 @@ function AboutTemplate() {
                   Presentational & Container / Atomic design 패턴 개발에
                   익숙합니다.
                </p>
+               <p>
+                  <a
+                     href="https://www.notion.so/643908c5ea174138bc8ad26c8b4f9189"
+                     target="blank"
+                  >
+                     자세한 내용은 Notion 참고 부탁드립니다.
+                  </a>
+               </p>
             </div>
             <IconContainer>
                <IconBox>

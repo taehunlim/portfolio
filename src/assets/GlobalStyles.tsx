@@ -62,6 +62,9 @@ const styles = css`
       outline: none;
    }
 
+   a {
+      color: ${theme.fg.white};
+   }
    a:focus {
       outline: none;
    }

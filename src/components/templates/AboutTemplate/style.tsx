@@ -6,6 +6,8 @@ const Container = styled.div`
       font-size: 70px;
    }
 
+   position: relative;
+   z-index: 9;
    min-height: 100vh;
    padding: 100px;
    display: grid;
