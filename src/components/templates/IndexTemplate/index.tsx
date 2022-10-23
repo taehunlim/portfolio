@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import StarTemplate from 'components/templates/StarTemplate';
+import Icon from 'components/atoms/Icon';
 
 import styledComponent from './style';
 
-const { Container, SlideContainer, StyledSlide } = styledComponent;
+const { Container, SlideContainer, StyledSlide, StyledLink, StyledAnchor } =
+   styledComponent;
 
 function IndexTemplate() {
    return (
@@ -51,7 +52,17 @@ function IndexTemplate() {
                   <p>✉️ naver.com</p>
                </StyledSlide>
                <StyledSlide>
-                  <Link to="/about">🙋🏻‍♂️ ABOUT ME</Link>
+                  <StyledLink to="/about">
+                     <span>🙋🏻‍♂️</span> <span>ABOUT ME</span>
+                  </StyledLink>
+                  <p>
+                     <StyledAnchor
+                        href="https://github.com/taehunlim"
+                        target="blank"
+                     >
+                        <Icon icon="github" height={21} /> <span>GITHUB</span>
+                     </StyledAnchor>
+                  </p>
                </StyledSlide>
             </SlideContainer>
          </Container>
