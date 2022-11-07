@@ -24,7 +24,7 @@ const linkStyles = ({ theme }: ThemeProps) => css`
    color: ${theme.fg.white};
 
    span {
-      :first-child {
+      :first-of-type {
          justify-self: center;
       }
    }
