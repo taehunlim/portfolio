@@ -2,12 +2,16 @@ import React from 'react';
 
 import StarTemplate from '../StarTemplate';
 import Icon from 'components/atoms/Icon';
+import Text from 'components/organisms/TestText';
 
+// import font from '../../../inter_Bold.json';
 import styledComponent from './style';
 
 const { Container, IconContainer, IconBox } = styledComponent;
 
 function AboutTemplate() {
+   // const { width, height } = useThree((state) => state.viewport);
+
    return (
       <StarTemplate>
          <Container>
@@ -120,6 +124,8 @@ function AboutTemplate() {
                   <p>RESTful APIs</p>
                </IconBox>
             </IconContainer>
+
+            <Text />
          </Container>
       </StarTemplate>
    );
