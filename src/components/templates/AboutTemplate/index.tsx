@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import StarTemplate from '../StarTemplate';
 import Icon from 'components/atoms/Icon';
-import Text from 'components/organisms/TestText';
 
-// import font from '../../../inter_Bold.json';
+import textParticles from 'components/organisms/TextParticles';
+
 import styledComponent from './style';
 
 const { Container, IconContainer, IconBox } = styledComponent;
 
+const texts = [
+   { id: 1, label: 'html', url: 'https://www.naver.com/' },
+   { id: 2, label: 'css3', url: 'https://www.naver.com/' },
+   { id: 3, label: 'sass', url: 'https://www.naver.com/' },
+   { id: 4, label: 'javascript', url: 'https://www.naver.com/' },
+   { id: 5, label: 'react', url: 'https://www.naver.com/' },
+   { id: 6, label: 'git', url: 'https://www.naver.com/' },
+   { id: 7, label: 'github', url: 'https://www.naver.com/' },
+   { id: 8, label: 'restful apis', url: 'https://www.naver.com/' },
+];
+
 function AboutTemplate() {
-   // const { width, height } = useThree((state) => state.viewport);
+   const ref = useRef(null);
+   useEffect(() => {
+      if (ref.current) {
+         textParticles(ref.current, texts, 10);
+      }
+   }, [ref]);
 
    return (
       <StarTemplate>
@@ -83,49 +99,51 @@ function AboutTemplate() {
                   </a>
                </p>
             </div>
-            <IconContainer>
-               <IconBox>
-                  <Icon icon="html5" width={70} />
-                  <p>HTML5</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="css3-alt" width={70} />
+            <div>
+               <IconContainer>
+                  <IconBox>
+                     <Icon icon="html5" width={70} />
+                     <p>HTML5</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="css3-alt" width={70} />
 
-                  <p>CSS3</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="sass" width={70} />
+                     <p>CSS3</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="sass" width={70} />
 
-                  <p>SASS</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="js" width={70} />
+                     <p>SASS</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="js" width={70} />
 
-                  <p>JavaScript</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="react" width={70} />
+                     <p>JavaScript</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="react" width={70} />
 
-                  <p>React</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="git-alt" width={70} />
+                     <p>React</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="git-alt" width={70} />
 
-                  <p>Git</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="github" width={70} />
+                     <p>Git</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="github" width={70} />
 
-                  <p>Github</p>
-               </IconBox>
-               <IconBox>
-                  <Icon icon="restful" width={70} />
+                     <p>Github</p>
+                  </IconBox>
+                  <IconBox>
+                     <Icon icon="restful" width={70} />
 
-                  <p>RESTful APIs</p>
-               </IconBox>
-            </IconContainer>
+                     <p>RESTful APIs</p>
+                  </IconBox>
+               </IconContainer>
 
-            <Text />
+               <div ref={ref}></div>
+            </div>
          </Container>
       </StarTemplate>
    );
