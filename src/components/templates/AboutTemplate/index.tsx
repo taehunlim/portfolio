@@ -142,7 +142,7 @@ function AboutTemplate() {
                   </IconBox>
                </IconContainer>
 
-               <div ref={ref}></div>
+               <div style={{ width: '500px', height: '500px' }} ref={ref}></div>
             </div>
          </Container>
       </StarTemplate>

@@ -8,6 +8,10 @@ interface Extra {
    url?: string;
 }
 
+// type Te = THREE.Intersection<THREE.Object3D<THREE.Event>> & {
+//    object: THREE.Mesh & Extra;
+// };
+
 let renderer: THREE.WebGLRenderer;
 let scene: THREE.Scene;
 let camera: THREE.PerspectiveCamera;
@@ -49,7 +53,7 @@ export default function textParticles(
       renderer.setPixelRatio(
          window.devicePixelRatio ? window.devicePixelRatio : 1,
       );
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(el.clientWidth, el.clientHeight);
       renderer.autoClear = false;
       renderer.setClearColor(0x000000, 0.0);
       el.appendChild(renderer.domElement);
@@ -57,7 +61,7 @@ export default function textParticles(
       scene = new THREE.Scene();
 
       camera = new THREE.PerspectiveCamera(
-         75,
+         50,
          window.innerWidth / window.innerHeight,
          1,
          1000,
@@ -72,13 +76,13 @@ export default function textParticles(
 
       window.addEventListener('resize', onWindowResize, false);
       document.addEventListener('click', onMouseClick, false);
-      document.addEventListener('mousemove', handlePointer, false);
+      el.addEventListener('mousemove', handlePointer, false);
    }
 
    function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(el.clientWidth, el.clientHeight);
    }
 
    function drawParticles(repeat = 1) {
@@ -97,7 +101,7 @@ export default function textParticles(
          if (i < textLength) {
             const geometry = new TextGeometry(texts[i].label, {
                font: font,
-               size: 10,
+               size: 15,
                height: 0,
                curveSegments: 10, // 하나의 커브를 구성하는 정점의 개수 (기본 값 12) = 값이 높을 수록 완벽한 곡선
             });
@@ -181,8 +185,8 @@ export default function textParticles(
    }
 
    function handlePointer(event: PointerEvent) {
-      pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
-      pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
+      pointer.x = (event.offsetX / el.clientWidth) * 2 - 1;
+      pointer.y = -(event.offsetY / el.clientHeight) * 2 + 1;
 
       handleHoverEvent();
    }
@@ -197,7 +201,7 @@ export default function textParticles(
             isStop = false;
 
             const isIntersectedMesh = intersects.some(
-               // @ts-ignore
+               //@ts-ignore
                (intersect) => intersect.object.textId === textMesh.textId,
             );
 
