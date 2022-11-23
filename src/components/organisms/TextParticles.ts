@@ -41,6 +41,7 @@ interface TextProps {
    id: number;
    label: string;
    url?: string;
+   size?: number;
 }
 
 export default function textParticles(
@@ -70,12 +71,12 @@ export default function textParticles(
       scene = new THREE.Scene();
 
       camera = new THREE.PerspectiveCamera(
-         50,
+         75,
          window.innerWidth / window.innerHeight,
          1,
          1000,
       );
-      camera.position.z = 400;
+      camera.position.z = 200;
 
       scene.add(camera);
 
@@ -84,7 +85,7 @@ export default function textParticles(
       setLights();
 
       window.addEventListener('resize', onWindowResize, false);
-      document.addEventListener('click', onMouseClick, false);
+      el.addEventListener('click', onMouseClick, false);
       el.addEventListener('mousemove', handlePointer, false);
    }
 
@@ -100,8 +101,8 @@ export default function textParticles(
       particleBgs = new THREE.Group();
 
       material = new THREE.MeshBasicMaterial({
-         color: 0x000000,
-         wireframe: true,
+         color: 0xfffff,
+         wireframe: false,
       });
 
       const textLength = texts.length;
@@ -110,9 +111,10 @@ export default function textParticles(
          if (i < textLength) {
             const geometry = new TextGeometry(texts[i].label, {
                font: font,
-               size: 15,
+               size: texts[i].size || 15,
                height: 0,
-               curveSegments: 10, // 하나의 커브를 구성하는 정점의 개수 (기본 값 12) = 값이 높을 수록 완벽한 곡선
+
+               curveSegments: 4, // 하나의 커브를 구성하는 정점의 개수 (기본 값 12) = 값이 높을 수록 완벽한 곡선
             });
             geometry.computeBoundingBox();
 

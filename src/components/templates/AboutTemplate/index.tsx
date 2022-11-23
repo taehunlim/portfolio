@@ -7,11 +7,11 @@ import textParticles from 'components/organisms/TextParticles';
 
 import styledComponent from './style';
 
-const { Container, IconContainer, IconBox } = styledComponent;
+const { Container, IconContainer, IconBox, TextParticles } = styledComponent;
 
 const texts = [
    { id: 1, label: 'html', url: 'https://www.naver.com/' },
-   { id: 2, label: 'css3', url: 'https://www.naver.com/' },
+   { id: 2, label: 'css3', size: 40, url: 'https://www.naver.com/' },
    { id: 3, label: 'sass', url: 'https://www.naver.com/' },
    { id: 4, label: 'javascript', url: 'https://www.naver.com/' },
    { id: 5, label: 'react', url: 'https://www.naver.com/' },
@@ -24,7 +24,7 @@ function AboutTemplate() {
    const ref = useRef(null);
    useEffect(() => {
       if (ref.current) {
-         textParticles(ref.current, texts, 10);
+         textParticles(ref.current, texts);
       }
    }, [ref]);
 
@@ -142,7 +142,7 @@ function AboutTemplate() {
                   </IconBox>
                </IconContainer>
 
-               <div style={{ width: '500px', height: '500px' }} ref={ref}></div>
+               <TextParticles ref={ref}></TextParticles>
             </div>
          </Container>
       </StarTemplate>

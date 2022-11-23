@@ -35,10 +35,21 @@ const IconBox = styled.div`
    }
 `;
 
+const TextParticles = styled.div`
+   width: 100%;
+   padding-top: 100%;
+   position: relative;
+   canvas {
+      position: absolute;
+      top: 0;
+   }
+`;
+
 const styledComponent = {
    Container,
    IconContainer,
    IconBox,
+   TextParticles,
 };
 
 export default styledComponent;
