@@ -8,17 +8,26 @@ interface Extra {
    url?: string;
 }
 
-// type Te = THREE.Intersection<THREE.Object3D<THREE.Event>> & {
-//    object: THREE.Mesh & Extra;
-// };
+type CustomMesh = THREE.Mesh & Extra;
+type CustomGeometry = TextGeometry & Extra;
+type Object3D = THREE.Object3D<THREE.Event> & Extra;
+
+type IntersectionObject3D = Object3D & {
+   geometry: CustomGeometry;
+};
+type Intersection = THREE.Intersection<THREE.Object3D<THREE.Event>> & {
+   object: IntersectionObject3D;
+};
 
 let renderer: THREE.WebGLRenderer;
 let scene: THREE.Scene;
 let camera: THREE.PerspectiveCamera;
-let mesh: THREE.Mesh & Extra;
-let geometry: TextGeometry & Extra;
+let mesh: CustomMesh;
+let geometry: CustomGeometry;
 let material: THREE.MeshBasicMaterial;
-let particles: THREE.Group;
+let particles: Omit<THREE.Group, 'children'> & {
+   children: Object3D[];
+};
 let particleBgs: THREE.Group;
 let font: Font;
 let geometries: typeof geometry[];
@@ -140,7 +149,7 @@ export default function textParticles(
       scene.add(particleBgs);
    }
 
-   function drawPlaneForText(textMesh: THREE.Mesh) {
+   function drawPlaneForText(textMesh: CustomMesh) {
       const { x, y } = textMesh.geometry.boundingBox!.max;
 
       const geometry = new THREE.PlaneGeometry(x, y);
@@ -174,10 +183,10 @@ export default function textParticles(
    function onMouseClick() {
       raycaster.setFromCamera(pointer, camera);
 
-      const intersects = raycaster.intersectObject(particles);
+      const intersects: Intersection[] = raycaster.intersectObject(particles);
       if (intersects.length > 0) {
          const { object } = intersects[0];
-         // @ts-ignore
+
          const { url } = object.geometry;
 
          window.open(url);
@@ -194,14 +203,13 @@ export default function textParticles(
    function handleHoverEvent() {
       raycaster.setFromCamera(pointer, camera);
 
-      const intersects = raycaster.intersectObject(particleBgs);
+      const intersects: Intersection[] = raycaster.intersectObject(particleBgs);
 
       if (intersects.length > 0) {
          particles.children.filter((textMesh) => {
             isStop = false;
 
             const isIntersectedMesh = intersects.some(
-               //@ts-ignore
                (intersect) => intersect.object.textId === textMesh.textId,
             );
 
