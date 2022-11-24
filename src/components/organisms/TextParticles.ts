@@ -114,7 +114,7 @@ export default function textParticles(
                size: texts[i].size || 15,
                height: 0,
 
-               curveSegments: 4, // 하나의 커브를 구성하는 정점의 개수 (기본 값 12) = 값이 높을 수록 완벽한 곡선
+               curveSegments: 10, // 하나의 커브를 구성하는 정점의 개수 (기본 값 12) = 값이 높을 수록 완벽한 곡선
             });
             geometry.computeBoundingBox();
 

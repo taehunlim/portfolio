@@ -10,14 +10,29 @@ import styledComponent from './style';
 const { Container, IconContainer, IconBox, TextParticles } = styledComponent;
 
 const texts = [
-   { id: 1, label: 'html', url: 'https://www.naver.com/' },
-   { id: 2, label: 'css3', size: 40, url: 'https://www.naver.com/' },
-   { id: 3, label: 'sass', url: 'https://www.naver.com/' },
-   { id: 4, label: 'javascript', url: 'https://www.naver.com/' },
-   { id: 5, label: 'react', url: 'https://www.naver.com/' },
-   { id: 6, label: 'git', url: 'https://www.naver.com/' },
-   { id: 7, label: 'github', url: 'https://www.naver.com/' },
-   { id: 8, label: 'restful apis', url: 'https://www.naver.com/' },
+   { id: 1, label: 'SASS', url: 'https://sass-lang.com/' },
+   { id: 2, label: 'styled-components', url: 'https://styled-components.com/' },
+   { id: 3, label: 'Emotion', url: 'https://emotion.sh/' },
+   { id: 4, label: 'Ant Design', url: 'https://ant.design/' },
+   { id: 5, label: 'Bootstrap', url: 'https://getbootstrap.com/' },
+   { id: 6, label: 'Javascript', url: 'http://vanilla-js.com/' },
+   { id: 7, label: 'Typescript', url: 'https://www.typescriptlang.org/' },
+   { id: 8, label: 'ThreeJS', url: 'https://www.naver.com/' },
+   { id: 9, label: 'React', url: 'https://reactjs.org/' },
+   { id: 10, label: 'Redux', url: 'https://redux.js.org/' },
+   { id: 11, label: 'Recoil', url: 'https://recoiljs.org/' },
+   { id: 12, label: 'useSWR', url: 'https://swr.vercel.app/' },
+   { id: 13, label: 'react-query', url: 'https://tanstack.com/query/v4' },
+   { id: 14, label: 'NodeJS', url: 'https://nodejs.org/ko/' },
+   { id: 15, label: 'ExpressJS', url: 'https://expressjs.com/' },
+   { id: 16, label: 'MongoDB', url: 'https://www.mongodb.com/home' },
+   { id: 17, label: 'WebRTC', url: 'https://webrtc.org/' },
+   { id: 18, label: 'Socket.IO', url: 'https://socket.io/' },
+   { id: 19, label: 'Webpack', url: 'https://webpack.js.org/' },
+   { id: 20, label: 'Vite', url: 'https://vitejs.dev/' },
+   { id: 21, label: 'Babel', url: 'https://babeljs.io/' },
+   { id: 22, label: 'Jest', url: 'https://jestjs.io/' },
+   { id: 23, label: 'Github', url: 'https://github.com/' },
 ];
 
 function AboutTemplate() {
