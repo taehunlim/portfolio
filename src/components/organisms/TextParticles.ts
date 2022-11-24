@@ -2,6 +2,7 @@ import * as THREE from 'three';
 
 import { FontLoader, Font } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 interface Extra {
    textId?: number;
@@ -36,6 +37,7 @@ let isStop = true;
 
 let raycaster = new THREE.Raycaster();
 let pointer = new THREE.Vector2();
+let controls: OrbitControls;
 
 interface TextProps {
    id: number;
@@ -84,6 +86,11 @@ export default function textParticles(
 
       setLights();
 
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.autoRotate = true;
+      controls.maxDistance = 1000;
+      controls.minDistance = 50;
+
       window.addEventListener('resize', onWindowResize, false);
       el.addEventListener('click', onMouseClick, false);
       el.addEventListener('mousemove', handlePointer, false);
@@ -101,7 +108,7 @@ export default function textParticles(
       particleBgs = new THREE.Group();
 
       material = new THREE.MeshBasicMaterial({
-         color: 0xfffff,
+         color: 0xffffff,
          wireframe: false,
       });
 
@@ -112,7 +119,7 @@ export default function textParticles(
             const geometry = new TextGeometry(texts[i].label, {
                font: font,
                size: texts[i].size || 15,
-               height: 0,
+               height: 5,
 
                curveSegments: 10, // 하나의 커브를 구성하는 정점의 개수 (기본 값 12) = 값이 높을 수록 완벽한 곡선
             });
@@ -253,6 +260,7 @@ export default function textParticles(
 
    function animate() {
       requestAnimationFrame(animate);
+      controls.update();
 
       renderer.clear();
       renderer.render(scene, camera);

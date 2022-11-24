@@ -22,6 +22,14 @@ const Container = styled.div`
    }
 `;
 
+const Right = styled.div`
+   padding-top: 131px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+`;
+
 const IconContainer = styled.div`
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(100px, 25%));
@@ -47,6 +55,7 @@ const TextParticles = styled.div`
 
 const styledComponent = {
    Container,
+   Right,
    IconContainer,
    IconBox,
    TextParticles,

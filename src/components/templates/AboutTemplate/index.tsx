@@ -7,7 +7,8 @@ import textParticles from 'components/organisms/TextParticles';
 
 import styledComponent from './style';
 
-const { Container, IconContainer, IconBox, TextParticles } = styledComponent;
+const { Container, Right, IconContainer, IconBox, TextParticles } =
+   styledComponent;
 
 const texts = [
    { id: 1, label: 'SASS', url: 'https://sass-lang.com/' },
@@ -17,7 +18,7 @@ const texts = [
    { id: 5, label: 'Bootstrap', url: 'https://getbootstrap.com/' },
    { id: 6, label: 'Javascript', url: 'http://vanilla-js.com/' },
    { id: 7, label: 'Typescript', url: 'https://www.typescriptlang.org/' },
-   { id: 8, label: 'ThreeJS', url: 'https://www.naver.com/' },
+   { id: 8, label: 'ThreeJS', url: 'https://threejs.org/' },
    { id: 9, label: 'React', url: 'https://reactjs.org/' },
    { id: 10, label: 'Redux', url: 'https://redux.js.org/' },
    { id: 11, label: 'Recoil', url: 'https://recoiljs.org/' },
@@ -114,7 +115,7 @@ function AboutTemplate() {
                   </a>
                </p>
             </div>
-            <div>
+            <Right>
                <IconContainer>
                   <IconBox>
                      <Icon icon="html5" width={70} />
@@ -158,7 +159,7 @@ function AboutTemplate() {
                </IconContainer>
 
                <TextParticles ref={ref}></TextParticles>
-            </div>
+            </Right>
          </Container>
       </StarTemplate>
    );
