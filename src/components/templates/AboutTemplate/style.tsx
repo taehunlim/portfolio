@@ -32,7 +32,7 @@ const Right = styled.div`
 
 const IconContainer = styled.div`
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(100px, 25%));
+   grid-template-columns: repeat(auto-fill, minmax(100px, 33.33%));
    gap: 70px 0;
 `;
 

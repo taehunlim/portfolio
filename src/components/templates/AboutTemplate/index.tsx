@@ -137,6 +137,11 @@ function AboutTemplate() {
                      <p>JavaScript</p>
                   </IconBox>
                   <IconBox>
+                     <Icon icon="ts" width={70} />
+
+                     <p>TypeScript</p>
+                  </IconBox>
+                  <IconBox>
                      <Icon icon="react" width={70} />
 
                      <p>React</p>
