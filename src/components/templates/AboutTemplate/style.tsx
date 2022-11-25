@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 
 const Right = styled.div`
-   padding-top: 131px;
+   padding-top: 80px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;

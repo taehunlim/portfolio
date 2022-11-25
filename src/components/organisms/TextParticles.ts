@@ -88,6 +88,7 @@ export default function textParticles(
 
       controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
+      controls.rotateSpeed = 0.5;
       controls.maxDistance = 1000;
       controls.minDistance = 50;
 
