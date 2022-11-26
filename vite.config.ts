@@ -14,6 +14,7 @@ export default defineConfig({
    resolve: {
       alias: {
          components: path.resolve(__dirname, 'src/components'),
+         fixtures: path.resolve(__dirname, 'src/fixtures'),
          apis: path.resolve(__dirname, 'src/apis'),
       },
    },
