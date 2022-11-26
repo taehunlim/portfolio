@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import StarTemplate from '../StarTemplate';
 import Icon from 'components/atoms/Icon';
 
-import textParticles from 'components/organisms/TextParticles';
+import textParticles from 'components/organisms/Text3D/TextParticles';
 
 import styledComponent from './style';
 
