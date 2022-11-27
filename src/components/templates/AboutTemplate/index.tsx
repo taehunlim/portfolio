@@ -1,24 +1,15 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 import StarTemplate from '../StarTemplate';
 import Icon from 'components/atoms/Icon';
 
-import textParticles from 'components/organisms/Text3D/TextParticles';
-import texts from 'fixtures/testx.json';
+import TextParticles from 'components/organisms/Text3D/TextParticles';
 
 import styledComponent from './style';
 
-const { Container, Right, IconContainer, IconBox, TextParticles } =
-   styledComponent;
+const { Container, Right, IconContainer, IconBox } = styledComponent;
 
 function AboutTemplate() {
-   const ref = useRef(null);
-   useEffect(() => {
-      if (ref.current) {
-         textParticles(ref.current, texts);
-      }
-   }, [ref]);
-
    return (
       <StarTemplate>
          <Container>
@@ -137,7 +128,7 @@ function AboutTemplate() {
                   </IconBox>
                </IconContainer>
 
-               <TextParticles ref={ref}></TextParticles>
+               <TextParticles />
             </Right>
          </Container>
       </StarTemplate>
